@@ -46,6 +46,7 @@ class Header
 #include "config\Cfg_Zones.hpp"
 #include "config\Cfg_Process.hpp"
 #include "scripts\Dialog\Include_GUI.hpp"
+#include "scripts\DA3F_FP_ShopVeh\Cfg_ShopVeh.hpp"
 
 // En cas de GUI title
 class RscTitles {

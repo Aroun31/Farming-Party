@@ -5,21 +5,21 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=2;
+	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=25;
+		nextID=40;
 	};
 	class MarkerIDProvider
 	{
-		nextID=2;
+		nextID=3;
 	};
 	class Camera
 	{
-		pos[]={4273.2939,498.41904,6742.186};
-		dir[]={0.16704002,-0.66755855,0.72558874};
-		up[]={0.14976363,0.74455523,0.65054548};
-		aside[]={0.9745177,-4.7846697e-008,-0.22434491};
+		pos[]={4127.1816,619.19629,7089.7358};
+		dir[]={0.28660294,-0.63117838,-0.72080535};
+		up[]={0.23321006,0.77562481,-0.58652055};
+		aside[]={-0.92927784,-1.0190706e-007,-0.36949545};
 	};
 };
 binarizationWanted=0;
@@ -121,7 +121,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=16;
+		items=20;
 		class Item0
 		{
 			dataType="Group";
@@ -344,12 +344,12 @@ class Mission
 		class Item3
 		{
 			dataType="Marker";
-			position[]={4281.8735,417.18542,6844.6616};
+			position[]={4279.6455,417.14954,6842.3535};
 			name="DA3F_mrk_taff";
 			text="Entreprise";
 			type="mil_box";
 			id=10;
-			atlOffset=-2.1528015;
+			atlOffset=-2.1846924;
 		};
 		class Item4
 		{
@@ -584,14 +584,14 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={4287.2798,420.5347,6817.0596};
-						angles[]={0,5.5540557,0};
+						position[]={4280.9521,420.35098,6817.3438};
+						angles[]={0,0.0097214831,0};
 					};
 					side="Civilian";
 					flags=7;
 					class Attributes
 					{
-						init="call{_DA3F = this call DA3F_fnc_init_PNJ_Taff;}";
+						init="call{_DA3F = this call DA3F_fnc_init_PNJ_Taff; " \n "}";
 						name="Vendeur_Taff";
 					};
 					id=24;
@@ -644,6 +644,113 @@ class Mission
 			{
 			};
 			id=23;
+		};
+		class Item16
+		{
+			dataType="Marker";
+			position[]={4281.3198,420.043,6828.5308};
+			name="DA3F_Mrk_Sp_VehEntrep_01";
+			text="spawn vehicules Entreprise 01";
+			type="Empty";
+			angle=25.728992;
+			id=35;
+			atlOffset=0.18383789;
+		};
+		class Item17
+		{
+			dataType="Marker";
+			position[]={4117.0112,374.07901,6214.3618};
+			name="DA3F_Mrk_Sp_VehCoope_01";
+			text="spawn vehicules coopérative 01";
+			type="Empty";
+			angle=217.0889;
+			id=36;
+			atlOffset=-0.61184692;
+		};
+		class Item18
+		{
+			dataType="Marker";
+			position[]={4292.1665,419.74493,6844.354};
+			name="DA3F_Mrk_Sp_VehEntrep_02";
+			text="spawn vehicules Entreprise 02";
+			type="Empty";
+			angle=269.1228;
+			id=37;
+		};
+		class Item19
+		{
+			dataType="Group";
+			side="Civilian";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4294.7285,419.96249,6843.9629};
+						angles[]={0,4.9168172,0};
+					};
+					side="Civilian";
+					flags=7;
+					class Attributes
+					{
+						init="call{_DA3F = this call DA3F_fnc_init_PNJ_Taff; " \n "[this,""Shop_Entrep_1""]call DA3F_fnc_addAction_PnjVeh;}";
+						name="Vendeur_Taff_1";
+					};
+					id=39;
+					type="C_Man_ConstructionWorker_01_Black_F";
+					atlOffset=0.013000488;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=38;
+			atlOffset=0.013000488;
 		};
 	};
 };

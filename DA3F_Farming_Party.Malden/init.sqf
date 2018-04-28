@@ -13,7 +13,7 @@
     *           init.sqf
     *
     *       DESCRIPTION :
-    *               -------------
+    *               Ceci est le script d'initialisation de base, d'ou son nom : init
     *       ARGUMENTS :
     *               -------------
     *       EXEMPLES :
@@ -21,18 +21,10 @@
     *
     */
 
-    DA3F_Action     = false;
-    DA3F_Cash       = 0;
-    DA3F_Bank       = 0;
-    DA3F_Faim       = 100;
-    DA3F_Soif       = 100;
-    DA3F_NextLvl    = 75;
-    DA3F_Death      = false;
-    DA3F_poids      = 0;
-    DA3F_poidMaxInv = 100;
-            missionNamespace setVariable ["DA3F_lvl_Farm",0];
-            missionNamespace setVariable ["DA3F_lvl_prog",0];
-            missionNamespace setVariable ["DA3F_lvl_next",DA3F_NextLvl];
-    []call DA3F_fnc_load_info;
-
-    player addEventHandler ["killed",{_this spawn{DA3F_Death = true}}];
+    0 execVM "scripts\init_Vars.sqf";
+    []spawn {
+        systemChat localize "DA3F_WelcomeChat";
+        cutText [localize "DA3F_WelcomeTitle","BLACK FADED",2];
+        sleep 3;
+        []call DA3F_fnc_load_info; // Vérification des données du joueur
+    };

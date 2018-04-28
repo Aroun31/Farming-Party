@@ -10,20 +10,25 @@
     *               [DA3F] Aroun Le BriCodeur
     *
     *       File :
-    *           init_Player.sqf
+    *           fn_Respawn.sqf
     *
     *       DESCRIPTION :
-    *               Ceci est le script d'initialisation des variables de la mission
-    *               Ajoutez à la suite des variables 'DA3F_' vos variables que vous souhaiteriez ajouter
+    *               -------------
     *       ARGUMENTS :
     *               -------------
     *       EXEMPLES :
     *               -------------
     *
     */
-
-
-    player addEventHandler ["killed",{_this spawn{DA3F_Death = true}}];
-
-            []spawn DA3F_fnc_autoSave;
-            []spawn DA3F_fnc_Spawn;
+    if (isNil"DA3F_Death") then {
+        DA3F_Death = false;
+    };
+    if (DA3F_Death) exitWith {
+        DA3F_Action     = false;
+        DA3F_Cash       = 0;
+        DA3F_Bank       = 0;
+        DA3F_Faim       = 100;
+        DA3F_Soif       = 100;
+        DA3F_Death      = false;
+        []spawn DA3F_fnc_spawn;
+    };

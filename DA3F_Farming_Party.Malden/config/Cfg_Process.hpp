@@ -22,16 +22,16 @@
     */
 
     class DA3F_Cfg_Process
-    {
+    { 
         class ble
         {
-            itemsRequis = "DA3F_Item_Ble_brut";
-            itemsRecup = "DA3F_Item_Ble_pur";
+            itemsRequis[] = {{"DA3F_Item_Ble_brut",2}};
+            itemsRecup[] = {{"DA3F_Item_Ble_pur",1}};
         };
 
         class mais
         {
-            itemsRequis = "DA3F_Item_mais_brut";
-            itemsRecup = "DA3F_Item_mais_pur";
+            itemsRequis[] = {{"DA3F_Item_mais_brut",2}};
+            itemsRecup[] = {{"DA3F_Item_mais_pur",1}};
         };
     };

@@ -1,7 +1,7 @@
 	/*
 	*
 	*       Project :  
-	*               Projet Alice 
+	*               Farming Party 
 	*
 	*       Team   :
 	*               Dev'Arma 3 France / http://devarma3france.fr/
@@ -22,3 +22,6 @@
 	*/
 		#include "DA3F_Define.hpp"
 		#include "DA3F_GUI_Spawn.hpp"
+		#include "DA3F_GUI_Shop_vehicle.hpp"
+		#include "DA3F_GUI_PlayerMenu.hpp"
+		#include "DA3F_GUI_Process.hpp"

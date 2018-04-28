@@ -1,7 +1,7 @@
 	/*
     *
     *       Project :  
-    *               Projet Alice 
+    *              Farming Party 
     *
     *       Team   :
     *               Dev'Arma 3 France / http://devarma3france.fr/
@@ -10,7 +10,7 @@
     *               [DA3F] Aroun Le BriCodeur
     *
     *       File :
-    *           DA3F_functions.hpp
+    *               DA3F_functions.hpp
     *
     *       DESCRIPTION :
     *               -------------
@@ -21,22 +21,11 @@
     *
 	*/
 
-        class DA3F_FarmParty
-        {
-            tag="DA3F";
-            class DA3F_FP_fnc
-            {   
-                file = "scripts"; 
-                    class Create_Info {}; 
-                    class load_info {}; 
-                    class save_info {}; 
-                    class keysboard {}; 
-                    class setupAction {}; 
-                    class spawn {}; 
-                    class Respawn {}; 
-                    class spawnConfirme {}; 
-                    class Farming {}; 
-                    class init_PNJ_Cope {}; 
-                    class init_PNJ_Taff {}; 
-            };
-        };
+    #include "scripts\DA3F_FP_ShopVeh\DA3F_functions_ShopVeh.hpp"
+    #include "scripts\DA3F_Save\DA3F_functions_Save.hpp"
+    #include "scripts\DA3F_Pnj\DA3F_functions_Pnj.hpp"
+    #include "scripts\DA3F_Fonctions\DA3F_functions_fnc.hpp"
+    #include "scripts\DA3F_Spawn\DA3F_functions_Spawn.hpp"
+    #include "scripts\DA3F_PlayerMenu\DA3F_functions_PlayerMenu.hpp"
+    #include "scripts\Dialog\sqf\DA3F_functions_GUI.hpp"
+    #include "scripts\DA3F_Process\DA3F_functions_Process.hpp"
